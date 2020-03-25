@@ -28,6 +28,9 @@ dependencies:
   provider: ^4.0.4
   dart_json_mapper: ^1.5.2
   dart_json_mapper_mobx: ^1.2.0
+  camera: ^0.5.7+4
+  path_provider: ^1.6.5
+  path: ^1.6.4
 
 dev_dependencies:
   flutter_test:

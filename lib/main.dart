@@ -11,6 +11,13 @@ import 'package:flutter_mobx_examples/todos_basic/todo.dart';
 import 'package:flutter_mobx_examples/multi_counter/multi_counter_store.dart';
 import 'package:flutter_mobx_examples/multi_counter/multi_counter_widgets.dart';
 
+// Catalog
+import 'package:flutter_mobx_examples/simple_catalog/store/catalog_store.dart';
+import 'package:flutter_mobx_examples/simple_catalog/catalog.dart';
+
+// login
+import 'package:flutter_mobx_examples/simple_catalog/store/login_store.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -23,6 +30,8 @@ class MyApp extends StatelessWidget {
         Provider<TodoList>(create: (_) => TodoList()),
         Provider<TaskList>(create: (_) => TaskList()),
         Provider<MultiCounterStore>(create: (_) => MultiCounterStore()),
+        Provider<CatalogStore>(create: (_) => CatalogStore()),
+        Provider<LoginStore>(create: (_) => LoginStore()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
@@ -66,6 +75,13 @@ class MyHomePage extends StatelessWidget {
               subtitle: Text('Multi Counter Store'),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => MultiCounterExample()));
+              },
+            ),
+            ListTile(
+              title: Text('Simple Catalog'),
+              subtitle: Text('Simple Catalog'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CatalogApp()));
               },
             ),
           ],
